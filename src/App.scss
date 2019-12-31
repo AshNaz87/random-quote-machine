@@ -1,0 +1,77 @@
+@import "/stylesheets/colors";
+
+#quote-box {
+  background-color: whitesmoke;
+  border-radius: 3px;    
+  bottom: 0;
+  height: 30vh;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;          
+  top: 0;
+  width: 50vw;
+  
+  #text {    
+    align-items: center;
+    display: flex;               
+    height: 50%;    
+    margin: 1em 1.5em;    
+    
+    blockquote {
+      text-align: center;
+
+      #quote {        
+        color: $teal;        
+        font-size: 1.2em;                   
+        position: relative;
+        
+        &::before {
+          content: open-quote;
+          font-size: 2em;
+          left: -17px;
+          position: absolute;
+          top: -15px;
+        }
+      }
+  
+      footer {
+        font-style: italic;
+        margin-top: 1em;
+      }
+    }
+    
+  }
+
+  #wrapper {
+    align-items: flex-start;    
+    display: flex;
+    height: 50%;
+    justify-content: space-around;    
+
+    .button {
+      border: 1px solid $teal;
+      border-radius: 2px;
+      cursor: pointer;      
+      text-align: center;
+      width: 25px;      
+    }    
+  }
+
+  #new-quote {
+    border-color: $teal;
+    border-radius: 2px;
+    cursor: pointer;
+    font-weight: 500;
+    height: 30px;
+    width: 75px;
+    
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .fab {
+    color: $teal;
+  }
+}
